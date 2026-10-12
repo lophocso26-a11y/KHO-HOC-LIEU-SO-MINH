@@ -1,0 +1,19 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/tts/test-phrases",
+      "destination": "/api/tts-test-phrases"
+    },
+    {
+      "source": "/api/tts/status",
+      "destination": "/api/tts"
+    },
+    {
+      "source": "/((?!api/|audio_cache/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
